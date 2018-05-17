@@ -1,0 +1,250 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Restruarant Manager",
+		"_postman_id": "9e4b0c5b-dcc2-3471-63af-2737e2ba3669",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Menus",
+			"description": "A collection of API calls to test the management of menus",
+			"item": [
+				{
+					"name": "Menu Categories",
+					"description": "A collection of API calls to to test the management of menu categories",
+					"item": [
+						{
+							"name": "Menu Items",
+							"description": "A collection of API calls for testing the management of menu items",
+							"item": [
+								{
+									"name": "Add a Menu Item",
+									"request": {
+										"url": "http://localhost:8080/menus/1/categories/1/items",
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"id\" : -1,\n\t\"name\" : \"Specials\",\n\t\"description\" : \"Feeling a bit special? We got you covered.\",\n\t\"cost\" : 540,\n\t\"imageURL\" : \"http://image.url\"\n}\n"
+										},
+										"description": "Adds a menu item"
+									},
+									"response": []
+								},
+								{
+									"name": "Get All Menu Items",
+									"request": {
+										"url": "http://localhost:8080/menu_item_categories",
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"description": "Gets a list of all the menu items for a given menu category in a JSON format"
+									},
+									"response": []
+								},
+								{
+									"name": "Get a Menu Item by  Id",
+									"request": {
+										"url": "http://localhost:8080/menus/1/categories/1/items/1",
+										"method": "GET",
+										"header": [],
+										"body": {},
+										"description": "Gets a menu item by id in a JSON format"
+									},
+									"response": []
+								},
+								{
+									"name": "Update a Menu Item by Id",
+									"request": {
+										"url": "http://localhost:8080/menus/1/categories/1/items/1",
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"description": ""
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"name\": \"Updated Item Name\",\n    \"description\": \"Updeated with a better description\",\n    \"cost\" : 695,\n    \"imageURL\" : \"http://anewimage.url\"\n}"
+										},
+										"description": "Updates the menu item with the specified id"
+									},
+									"response": []
+								},
+								{
+									"name": "Delete a Menu Item by Id",
+									"request": {
+										"url": "http://localhost:8080/menus/1/categories/1",
+										"method": "DELETE",
+										"header": [],
+										"body": {},
+										"description": "Deletes the menu item with the given id"
+									},
+									"response": []
+								}
+							],
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get a Menu Category by  Id",
+							"request": {
+								"url": "http://localhost:8080/menus/1/categories/1",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "Gets a menu category by id in a JSON format"
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Menu Categories",
+							"request": {
+								"url": "http://localhost:8080/menus/1/categories",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": "Gets a list of all the menu categories for a given menu in a JSON format"
+							},
+							"response": []
+						},
+						{
+							"name": "Add a Menu Category",
+							"request": {
+								"url": "http://localhost:8080/menus/1/categories",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"id\" : -1,\n\t\"name\" : \"Specials\",\n\t\"description\" : \"Feeling a bit special? We got you covered.\"\n}"
+								},
+								"description": "Adds a menu category"
+							},
+							"response": []
+						},
+						{
+							"name": "Update a Menu Category by Id",
+							"request": {
+								"url": "http://localhost:8080/menus/1/categories/1",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": 1,\n    \"name\": \"Updated Sspcials\",\n    \"description\": \"Updeated with a better description\"\n}"
+								},
+								"description": "Updates the menu category with the specified id"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete a Menu Category by Id",
+							"request": {
+								"url": "http://localhost:8080/menus/1/categories/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {},
+								"description": "Deletes the menu category with the given id"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get All Menus",
+					"request": {
+						"url": "http://localhost:8080/menus",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Gets a list of all the menus in a JSON format"
+					},
+					"response": []
+				},
+				{
+					"name": "Add a Menu",
+					"request": {
+						"url": "http://localhost:8080/menus",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\" : -1,\n\t\"name\" : \"Dragon's Burgers lunch time menu\",\n\t\"description\" : \"The lunchtime menu\"\n}"
+						},
+						"description": "Adds a menu"
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Menu by  Id",
+					"request": {
+						"url": "http://localhost:8080/menus/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": "Gets a menu by id in a JSON format"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Menu by Id",
+					"request": {
+						"url": "http://localhost:8080/menus/1",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"name\": \"Dragon's Burgers new menu\",\n    \"description\": \"Super duper tasty new menu\"\n}"
+						},
+						"description": "Updates the menu with the given id"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Menu by Id",
+					"request": {
+						"url": "http://localhost:8080/menus/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": "Deletes the menu with the given id"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed May 16 00:28:29 BST 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.1.0 - (1808820): instance a816c00e-0163-6622-380d-0000051b43e0 
+on database directory memory:C:\Users\David\Documents\NetBeansProjects\Restaurant Manager API\testdb with class loader sun.misc.Launcher$AppClassLoader@659e0bfd 
+Loaded from file:/C:/Users/David/.m2/repository/org/apache/derby/derby/10.14.1.0/derby-10.14.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_162-b12
+user.dir=C:\Users\David\Documents\NetBeansProjects\Restaurant Manager API
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
